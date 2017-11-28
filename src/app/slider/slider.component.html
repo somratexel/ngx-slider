@@ -1,0 +1,30 @@
+<h4 *ngIf="config.showTitle" class="slide-title" [innerHTML]="activeTitle"></h4>
+<div class="slider-container">
+  <div class="slider-row">
+    <div [ngStyle]="sliderStyle" class="slide-wrapper">
+      <div *ngFor="let slide of sliderItems; let i=index;" 
+           [class.active]="i === currentItemIndex"
+           [ngStyle]="slideStyle" 
+           class="slide-item">
+           <div [ngStyle]="{'background-image': 'url(' + slide.src + ')'}" class="slide"></div>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngIf="sliderItems.length > 1 && config.showNavigator">
+      <button (click)="goTo('next')" class="slider-nav next">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        <button (click)="goTo('previous')" class="slider-nav previous">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+  </ng-container>
+  <div *ngIf="sliderItems.length > 1 && config.showDots" class="slider-dots">
+    <ul>
+      <li *ngFor="let slide of sliderItems; let i=index;" [class.active]="i === currentItemIndex">
+        <button (click)="goTo(i)" class="dots">
+          <i class="fa fa-circle" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
