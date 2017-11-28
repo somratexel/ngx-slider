@@ -46,7 +46,7 @@ export class SliderComponent implements OnInit {
     this.setSlideStyle();
   }
 
-  public setSliderStyle(): void {
+  private setSliderStyle(): void {
     const width = `${this.getWrapperWidth()}px`;
     const left = this.getWrapperLeft() ? `-${this.getWrapperLeft() - this.getPreviewWidth()}px` : 0;
 
@@ -57,35 +57,35 @@ export class SliderComponent implements OnInit {
     };
   }
 
-  public setSlideStyle(): void {
+  private setSlideStyle(): void {
     this.slideStyle = {
       width: `${this.componentWidth}px`,
       padding: this.config.slidePadding
     };
   }
 
-  public setTitle(): void {
+  private setTitle(): void {
     this.activeTitle =
       this.sliderItems.length ? this.sliderItems[this.currentItemIndex].title : '';
   }
 
-  public getNumberOfPreview(): number {
+  private getNumberOfPreview(): number {
     return this.config.showPreview ? this.config.numberOfPreview : 0;
   }
 
-  public getPreviewWidth(): number {
+  private getPreviewWidth(): number {
     return this.config.showPreview ? this.config.previewWidth : 0;
   }
 
-  public getWrapperWidth(): number {
+  private getWrapperWidth(): number {
     return this.sliderItems.length ? this.sliderItems.length * this.componentWidth : this.componentWidth;
   }
 
-  public getWrapperLeft(): number {
+  private getWrapperLeft(): number {
     return this.currentItemIndex * this.componentWidth;
   }
 
-  public goTo(action: any): void {
+  private goTo(action: any): void {
     if (action === 'next') {
       if (this.sliderItems.length - 1 > this.currentItemIndex) {
         this.currentItemIndex++;
