@@ -6,7 +6,6 @@ export class SliderConfig {
     showPreview: boolean;
     numberOfPreview: number;
     previewWidth: number;
-    slidePadding: any;
     transitionDuration: number;
 
     constructor() {
@@ -17,7 +16,6 @@ export class SliderConfig {
         this.showPreview = true;
         this.numberOfPreview = 2;
         this.previewWidth = 50;
-        this.slidePadding = `0 5px`;
         this.transitionDuration = 1;
     }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener, ElementRef, Renderer } from '@angular/core';
+import { Component, OnInit, Input, HostListener, ElementRef } from '@angular/core';
 import { Slider } from './class/slider';
 import { ISliderConfig } from './interface/slider-config';
 import { ISlide } from './interface/slide';
@@ -21,8 +21,7 @@ export class SliderComponent implements OnInit {
   private slideStyle: any;
 
   constructor(
-    public el: ElementRef,
-    public renderer: Renderer
+    public el: ElementRef
   ) {
     this.currentItemIndex = 0;
     this.activeTitle = '';
@@ -42,7 +41,7 @@ export class SliderComponent implements OnInit {
   }
 
   private resize() {
-    this.componentWidth = this.el.nativeElement.offsetWidth - (this.getPreviewWidth() * this.getNumberOfPreview());
+    this.componentWidth = this.el.nativeElement.parentElement.clientWidth - (this.getPreviewWidth() * this.getNumberOfPreview());
     this.setSlideStyle();
   }
 
@@ -59,8 +58,7 @@ export class SliderComponent implements OnInit {
 
   private setSlideStyle(): void {
     this.slideStyle = {
-      width: `${this.componentWidth}px`,
-      padding: this.config.slidePadding
+      width: `${this.componentWidth}px`
     };
   }
 

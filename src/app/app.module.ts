@@ -7,11 +7,11 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SliderModule
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

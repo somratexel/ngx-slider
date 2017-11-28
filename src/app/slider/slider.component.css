@@ -27,11 +27,10 @@
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
+    margin: 0 5px;
 }
 .slide-title {
     font-size: 1.5rem;
-    position: absolute;
-    margin-top: -30px;
     padding: 10px;
 }
 .slider-nav {
@@ -55,13 +54,14 @@
 
 .slider-dots {
     position: absolute;
-    bottom: 0;
+    bottom: 3%;
     width: 100%;
     text-align: center;
 }
 
 .slider-dots ul {
     margin: 0;
+    padding: 0;
 }
 
 .slider-dots ul li {
