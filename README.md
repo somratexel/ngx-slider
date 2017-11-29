@@ -17,15 +17,14 @@ npm install ngx-slider --save
 ```
 ## Dependencies
 
-This project has dependency on font awesome
+This project has dependency on font awesome.
+Add font awesome to your project if it does now added yet.
 To add font awesome do the following:
 
 run : 
 ```
-npm install font-awesome -save
+npm install font-awesome --save
 ```
-
-Add font awesome to your project if it does now added yet.
 
 If your app build on angular CLI then you can edit angular-cli.json file as follows:
 
