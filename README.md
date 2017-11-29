@@ -12,18 +12,22 @@ https://somratexel.github.io/ngx-slider
 https://www.npmjs.com/package/ngx-slider
 
 ## Install
+```
 npm install ngx-slider --save
-
+```
 ## Dependencies
 
 This project has dependency on font awesome
 To add font awesome do the following:
 
-run : npm install font-awesome -save
+run : 
+```
+npm install font-awesome -save
+```
 
 Add font awesome to your project if it does now added yet.
 
-If your app build on angular CLI then you can edit anglar-cli.json file as follows:
+If your app build on angular CLI then you can edit angular-cli.json file as follows:
 
 ```json
 "styles": [
@@ -42,7 +46,7 @@ import { SliderModule } from 'ngx-slider';
 2. Import Slider to your desired component
 
 ```ts
-	import { Slider } from 'ngx-slider';
+import { Slider } from 'ngx-slider';
 ```
 
 Use Slider as follows for an example:
@@ -85,7 +89,7 @@ export class AppComponent implements OnInit {
   <ngx-slider [init]="slider"></ngx-slider>
 </div>
 ```
- Make sure the comopents parent elemnt has a height
+ Make sure the comopents parent element has a height.
 
 
 ## Configuration
