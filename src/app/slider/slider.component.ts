@@ -4,7 +4,8 @@ import { ISliderConfig } from './interface/slider-config';
 import { ISlide } from './interface/slide';
 
 @Component({
-  selector: 'app-slider',
+  // tslint:disable-next-line:component-selector
+  selector: 'ngx-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css']
 })
@@ -12,13 +13,13 @@ export class SliderComponent implements OnInit {
 
   @Input() init: Slider;
 
-  private sliderItems: Array<ISlide>;
-  private config: ISliderConfig;
-  private componentWidth: number;
-  private currentItemIndex: number;
-  private activeTitle: string;
-  private sliderStyle: any;
-  private slideStyle: any;
+  public sliderItems: Array<ISlide>;
+  public config: ISliderConfig;
+  public componentWidth: number;
+  public currentItemIndex: number;
+  public activeTitle: string;
+  public sliderStyle: any;
+  public slideStyle: any;
 
   constructor(
     public el: ElementRef
