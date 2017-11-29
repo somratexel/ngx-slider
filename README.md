@@ -1,6 +1,6 @@
 ## NgxSlider
 
-This project is a carousel slider slider with some basic configuration for Angular 4
+This project is a carousel slider with some basic configuration for Angular 4
 
 ## GitHub
 https://github.com/somratexel/ngx-slider
