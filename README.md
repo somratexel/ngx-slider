@@ -139,3 +139,4 @@ public slider = new Slider();
 * Angular2
 * Angular4
 
+

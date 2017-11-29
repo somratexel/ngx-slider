@@ -13,6 +13,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     SliderModule
   ],
+  exports: [
+    SliderModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
