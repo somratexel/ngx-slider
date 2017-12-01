@@ -1,7 +1,8 @@
 {
   "name": "ngx-slider",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
+  "keywords": ["Angular", "Angular2+", "Image Slider", "Carousel", "Responsive"],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,7 +13,7 @@
     "packagr": "ng-packagr -p ng-package.json"
   },
   "private": false,
-  "dependencies": {
+  "peerDependencies": {
     "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
