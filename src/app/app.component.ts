@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   constructor() {
     this.slider.config.loop = true;
-    this.slider.config.showPreview = false;
+    this.slider.config.showPreview = true;
   }
 
   ngOnInit() {
@@ -26,4 +26,5 @@ export class AppComponent implements OnInit {
 
     this.slider.items = slideItems;
   }
+
 }
