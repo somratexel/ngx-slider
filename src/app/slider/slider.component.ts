@@ -34,11 +34,29 @@ export class SliderComponent implements OnInit {
     this.setTitle();
     this.resize();
     this.setSliderStyle();
+    this.setAutoTransition();
   }
 
   @HostListener('window:resize', ['$event.target'])
   onResize() {
     this.resize();
+  }
+
+  //Checks if Auto Transition is wanted, calls auto stepping function if it is.
+  private setAutoTransition() {
+    let speed = this.config.autoTransistionSpeed * 1000
+    if (this.config.autoTransistion == true) {
+      this.runAutoTransition(speed)
+    }
+  }
+
+  //Infinite rerun loop as set speed
+  private runAutoTransition(speed) {
+    let that = this
+    setTimeout(function() {
+      that.goTo("next")
+      that.runAutoTransition(speed)
+    }, speed)
   }
 
   private resize() {

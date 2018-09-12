@@ -21,7 +21,7 @@ This project has dependency on font awesome.
 Add font awesome to your project if it does now added yet.
 To add font awesome do the following:
 
-run : 
+run :
 ```
 npm install font-awesome --save
 ```
@@ -101,10 +101,12 @@ Available options are listed blow:
 | __showNavigator__ | true | boolean | |
 | __showTitle__ | true | boolean | |
 | __loop__ | true | boolean | |
-| __showPreview__ | true | boolean | | 
+| __showPreview__ | true | boolean | |
 | __numberOfPreview__ | 2 | number | |
 | __previewWidth__ | 50 | number | px |
-| __transitionDuration__ | 1 | number | second |
+| __transitionDuration__ | 1 | number | seconds |
+| __autoTransition__ | false | boolean |  |
+| __autoTransitionSpeed__ | 3 | number | seconds |
 
 You can confirure the optins as follows:
 
@@ -115,6 +117,8 @@ public slider = new Slider();
     this.slider.config.loop = true;
     this.slider.config.showPreview = false;
     this.slider.config.transitionDuration = 3;
+    this.slider.config.autoTransistion = true;
+    this.slider.config.autoTransistionSpeed = 5;
   }
 ```
 
@@ -138,4 +142,3 @@ public slider = new Slider();
 * Responsive
 * Angular2
 * Angular4
-
