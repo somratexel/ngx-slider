@@ -12,6 +12,8 @@ export class AppComponent implements OnInit {
   constructor() {
     this.slider.config.loop = true;
     this.slider.config.showPreview = false;
+    this.slider.config.autoTransistion = true;
+    this.slider.config.autoTransistionSpeed = 5;
   }
 
   ngOnInit() {

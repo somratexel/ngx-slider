@@ -7,6 +7,8 @@ export class SliderConfig {
     numberOfPreview: number;
     previewWidth: number;
     transitionDuration: number;
+    autoTransistion: boolean;
+    autoTransistionSpeed: number;
 
     constructor() {
         this.showDots = true;
@@ -17,5 +19,7 @@ export class SliderConfig {
         this.numberOfPreview = 2;
         this.previewWidth = 50;
         this.transitionDuration = 1;
+        this.autoTransistion = false;
+        this.autoTransistionSpeed = 3;
     }
 }

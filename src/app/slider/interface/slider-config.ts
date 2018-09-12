@@ -7,4 +7,6 @@ export interface ISliderConfig {
     numberOfPreview?: number;
     previewWidth?: number;
     transitionDuration?: number; // in second
+    autoTransistionSpeed?: number; // in second
+    autoTransistion?: boolean;
 }
